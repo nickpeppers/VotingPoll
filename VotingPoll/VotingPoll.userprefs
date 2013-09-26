@@ -1,6 +1,10 @@
 ﻿<Properties>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.Workbench ActiveDocument="VotingPoll/MainActivity.cs">
+    <Files>
+      <File FileName="VotingPoll/MainActivity.cs" Line="42" Column="6" />
+      <File FileName="VotingPoll/Poll.cs" Line="14" Column="1" />
+    </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State expanded="True">

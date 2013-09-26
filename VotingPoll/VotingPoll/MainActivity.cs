@@ -36,6 +36,10 @@ namespace VotingPoll
 				Votes = new int[] {2,5,10}
 			};
 
+			button1.Click += (sender, e) => 
+			{
+				MobileService.GetTable<Poll>().InsertAsync(poll1).ContinueWith (t => { });
+			};
 		}
 	}
 }
