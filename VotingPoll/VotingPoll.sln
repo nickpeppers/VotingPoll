@@ -1,0 +1,20 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VotingPoll", "VotingPoll\VotingPoll.csproj", "{A1F8A0B6-338D-4440-803C-C2996823642E}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{A1F8A0B6-338D-4440-803C-C2996823642E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A1F8A0B6-338D-4440-803C-C2996823642E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A1F8A0B6-338D-4440-803C-C2996823642E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A1F8A0B6-338D-4440-803C-C2996823642E}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(MonoDevelopProperties) = preSolution
+		StartupItem = VotingPoll\VotingPoll.csproj
+	EndGlobalSection
+EndGlobal

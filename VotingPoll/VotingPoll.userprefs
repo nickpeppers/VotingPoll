@@ -1,0 +1,14 @@
+﻿<Properties>
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="VotingPoll\MainActivity.cs">
+    <Files>
+      <File FileName="VotingPoll\Candidate.cs" Line="12" Column="32" />
+      <File FileName="VotingPoll\MainActivity.cs" Line="26" Column="92" />
+    </Files>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.ItemProperties.VotingPoll MonoForAntroid.PreferredDevice="3.7in WVGA (Nexus One)" />
+</Properties>
