@@ -1,10 +1,10 @@
 using System;
 using Android.App;
 using Android.Content;
+using Android.OS;
 using Android.Runtime;
 using Android.Views;
 using Android.Widget;
-using Android.OS;
 using Microsoft.WindowsAzure.MobileServices;
 
 namespace VotingPoll
@@ -28,9 +28,15 @@ namespace VotingPoll
 			var button1 = FindViewById<Button> (Resource.Id.myButton);
             var button2 = FindViewById<Button> (Resource.Id.button1);
             var text = FindViewById<TextView>(Resource.Id.textView1);
+
+			var poll1 = new Poll 
+			{
+				Question = "How much would could a woodchuck chuck?",
+				Choices = new string[] {"WoodChuck's can't chuck wood", "2", "10000"},
+				Votes = new int[] {2,5,10}
+			};
+
 		}
-
-
 	}
 }
 
