@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent">
+    <TextView
+        android:text="Enter a poll question"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/TitleText"
+        android:layout_marginTop="10dp"
+        android:paddingLeft="5dp" />
+    <EditText
+        android:inputType="textMultiLine"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/QuestionEditText"
+        android:layout_marginTop="5dp"
+        android:background="#E0E0E0"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp" />
+    <TextView
+        android:text="Enter the number of responses"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/NumberText"
+        android:layout_marginTop="10dp"
+        android:paddingLeft="5dp" />
+    <LinearLayout
+        android:orientation="horizontal"
+        android:minWidth="25px"
+        android:minHeight="25px"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/ChoicesLayout"
+        android:layout_marginTop="5dp">
+        <EditText
+            android:inputType="number"
+            android:id="@+id/ChoicesEditText"
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:layout_weight="1"
+            android:background="#ffe0e0e0"
+            android:layout_marginLeft="5dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="5dp" />
+        <Button
+            android:text="Create Poll Responses"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/CreateChoicesButton"
+            android:layout_weight="1" />
+    </LinearLayout>
+</LinearLayout>

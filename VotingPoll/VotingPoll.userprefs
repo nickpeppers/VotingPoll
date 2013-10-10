@@ -1,17 +1,16 @@
 ﻿<Properties>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="VotingPoll/MainActivity.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="VotingPoll\MainActivity.cs">
     <Files>
-      <File FileName="VotingPoll/Poll.cs" Line="14" Column="1" />
-      <File FileName="VotingPoll/MainActivity.cs" Line="41" Column="4" />
+      <File FileName="VotingPoll\MainActivity.cs" Line="12" Column="54" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
-        <State expanded="True">
+        <State expanded="True" selected="True">
           <Node name="VotingPoll" expanded="True">
-            <Node name="References" expanded="True" />
-            <Node name="ComponentReferenceFolder" expanded="True" />
-            <Node name="MainActivity.cs" selected="True" />
+            <Node name="Resources" expanded="True">
+              <Node name="layout" expanded="True" />
+            </Node>
           </Node>
         </State>
       </Pad>

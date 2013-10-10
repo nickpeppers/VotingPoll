@@ -21,23 +21,32 @@ namespace VotingPoll
 		{
 			base.OnCreate (bundle);
 
-			SetContentView (Resource.Layout.Main);
+			SetContentView (Resource.Layout.MainLayout);
 
-			var button1 = FindViewById<Button> (Resource.Id.myButton);
-            var button2 = FindViewById<Button> (Resource.Id.button1);
-            var text = FindViewById<TextView>(Resource.Id.textView1);
+			var viewPollButton = FindViewById<Button> (Resource.Id.ViewPollsButton);
+            var createPollButton = FindViewById<Button> (Resource.Id.CreatePollButton);
 
-			var poll1 = new Poll 
-			{
-				Question = "How much would could a woodchuck chuck?",
-				Choices = new string[] {"WoodChuck's can't chuck wood", "2", "10000"},
-				Votes = new int[] {2,5,10}
-			};
+            viewPollButton.Click += (sender, e) => 
+            {
 
-			button1.Click += (sender, e) => 
-			{
-				MobileService.GetTable<Poll>().InsertAsync(poll1).ContinueWith (t => { });
-			};
+            };
+
+            createPollButton.Click += (sender, e) => 
+            {
+                StartActivity(typeof(CreatePollActivity));
+            };
+
+//			var poll1 = new Poll 
+//			{
+//				Question = "How much would could a woodchuck chuck?",
+//				Choices = new string[] {"WoodChuck's can't chuck wood", "2", "10000"},
+//				Votes = new int[] {2,5,10}
+//			};
+//
+//			button1.Click += (sender, e) => 
+//			{
+//				MobileService.GetTable<Poll>().InsertAsync(poll1).ContinueWith (t => { });
+//			};
 		}
 	}
 }
