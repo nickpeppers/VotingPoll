@@ -28,7 +28,7 @@ namespace VotingPoll
 
             viewPollButton.Click += (sender, e) => 
             {
-
+                StartActivity(typeof(ViewPollsActivity));
             };
 
             createPollButton.Click += (sender, e) => 

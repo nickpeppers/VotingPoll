@@ -19,7 +19,9 @@
         android:layout_marginTop="5dp"
         android:background="#E0E0E0"
         android:layout_marginLeft="5dp"
-        android:layout_marginRight="5dp" />
+        android:layout_marginRight="5dp"
+        android:minLines="2"
+        android:padding="3dp" />
     <TextView
         android:text="Enter the number of responses"
         android:textAppearance="?android:attr/textAppearanceLarge"
@@ -44,8 +46,7 @@
             android:layout_weight="1"
             android:background="#ffe0e0e0"
             android:layout_marginLeft="5dp"
-            android:layout_marginTop="5dp"
-            android:layout_marginBottom="5dp" />
+            android:padding="3dp" />
         <Button
             android:text="Create Poll Responses"
             android:layout_width="wrap_content"
