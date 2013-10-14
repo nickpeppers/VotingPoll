@@ -15,13 +15,18 @@ namespace VotingPoll
     [Activity(Label = "My Activity")]
     public class ViewPollsActivity : ListActivity
     {
-        Poll[] polls;
+        List<Poll> polls;
 
-        protected override void OnCreate(Bundle bundle)
+        protected async override void OnCreate(Bundle bundle)
         {
             base.OnCreate(bundle);
 
-            polls = new Poll[] { new Poll { Question = "Whats your favorite color?" }, new Poll { Question = "Whats your favorite day of the week" } };
+            var progressDialog = new ProgressDialog(this);
+            progressDialog.Show();
+
+            polls = await VotingService.MobileService.GetTable<Poll>().ToListAsync();
+            progressDialog.Dismiss();
+
             ListAdapter = new ArrayAdapter<Poll>(this, Android.Resource.Layout.SimpleListItem1, polls);
         }
 
@@ -30,7 +35,7 @@ namespace VotingPoll
             base.OnListItemClick(l, v, position, id);
             var poll = polls[position];
             var viewCurrentPoll = new Intent(this, typeof(CurrentPollActivity));
-            //viewCurrentPoll.put.PutExtra("CurrentPoll", poll);
+            VotingService.Poll = poll;
             StartActivity(viewCurrentPoll);
         }
     }

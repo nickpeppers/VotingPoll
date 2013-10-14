@@ -32,9 +32,17 @@ namespace VotingPoll
 
             questionTitle.Text = question;
 
-            createPollButton.Click += (sender, e) => 
+            createPollButton.Click += async (sender, e) => 
             {
-
+                await VotingService.MobileService.GetTable<Poll>().InsertAsync(new Poll
+                {
+                    Question = questionTitle.Text,
+                    Choices = response1.Text + "," +
+                        response2.Text + "," +
+                        response3.Text + "," +
+                        response4.Text,
+                    Votes = "0,0,0,0",
+                });
             };
 
             switch (numberOfResponses)

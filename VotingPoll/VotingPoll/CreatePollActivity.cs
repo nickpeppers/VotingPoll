@@ -45,7 +45,6 @@ namespace VotingPoll
                         createResponses.PutExtra("NumberOfResponses", num);
                         StartActivity(createResponses);
                     }
-
                 }
                 else
                 {

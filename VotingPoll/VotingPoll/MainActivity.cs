@@ -12,12 +12,7 @@ namespace VotingPoll
 	[Activity (Label = "VotingPoll", MainLauncher = true)]
 	public class MainActivity : Activity
 	{
-
-		public static string mobileServiceUrl = "https://csintermediateproject.azure-mobile.net/";
-		public static string mobileServceAppKey = "zeBmdSnLPMjmgYyBgucUibIGUkwGER72";
-		private static readonly MobileServiceClient MobileService = new MobileServiceClient( mobileServiceUrl, mobileServceAppKey);
-
-		protected override void OnCreate (Bundle bundle)
+        protected override void OnCreate (Bundle bundle)
 		{
 			base.OnCreate (bundle);
 

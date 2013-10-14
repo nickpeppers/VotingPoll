@@ -32,15 +32,23 @@ namespace VotingPoll
             var choice3Edit = FindViewById<EditText>(Resource.Id.Choice3EditText);
             var choice4Edit = FindViewById<EditText>(Resource.Id.Choice4EditText);
 
+            string[] split = VotingService.Poll.Votes.Split(',');
+            choice1Edit.Text = split[0];
+            choice2Edit.Text = split[1];
+            choice3Edit.Text = split[2];
+            choice4Edit.Text = split[3];
+
             viewChartButton.Click += (sender, e) => 
             {
                 var viewChartIntent = new Intent(this, typeof(ViewChartActivity));
                 StartActivity(viewChartIntent);
             };
 
-            submitResponsesButton.Click += (sender, e) => 
+            submitResponsesButton.Click += async (sender, e) => 
             {
+                VotingService.Poll.Votes = choice1Edit.Text + "," + choice2Edit.Text + "," + choice3Edit.Text + "," + choice4Edit.Text;
 
+                await VotingService.MobileService.GetTable<Poll>().UpdateAsync(VotingService.Poll);
             };
         }
     }
