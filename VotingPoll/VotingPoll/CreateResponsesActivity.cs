@@ -22,7 +22,7 @@ namespace VotingPoll
 
             var responses = FindViewById<LinearLayout>(Resource.Id.ResponsesLinearLayout);
             var questionTitle = FindViewById<TextView>(Resource.Id.QuestionText);
-            var createPollButton = FindViewById<Button>(Resource.Id.CreatePollButton);
+            var createPollButton = FindViewById<Button>(Resource.Id.CreateResponsesCreatePollButton);
             var response1 = FindViewById<EditText>(Resource.Id.Response1);
             var response2 = FindViewById<EditText>(Resource.Id.Response2);
             var response3 = FindViewById<EditText>(Resource.Id.Response3);
@@ -31,6 +31,11 @@ namespace VotingPoll
             var numberOfResponses = Intent.GetIntExtra("NumberOfResponses", 2);
 
             questionTitle.Text = question;
+
+            createPollButton.Click += (sender, e) => 
+            {
+
+            };
 
             switch (numberOfResponses)
             {

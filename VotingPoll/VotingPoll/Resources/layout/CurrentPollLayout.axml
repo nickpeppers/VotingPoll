@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent">
+    <TextView
+        android:text="Question"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/CurrentPollQuestion"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"
+        android:lines="2" />
+    <TextView
+        android:text="Enter the number of votes"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/textView2"
+        android:layout_marginTop="10dp"
+        android:gravity="center" />
+    <LinearLayout
+        android:orientation="horizontal"
+        android:minWidth="25px"
+        android:minHeight="25px"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/Choice1Layout"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"
+        android:layout_marginTop="10dp">
+        <TextView
+            android:text="Choice 1"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:id="@+id/Choice1"
+            android:gravity="center"
+            android:layout_marginRight="5dp"
+            android:layout_weight="1" />
+        <EditText
+        	android:inputType="number"
+            android:layout_height="fill_parent"
+            android:id="@+id/Choice1EditText"
+            android:padding="3dp"
+            android:background="#E0E0E0"
+            android:layout_width="wrap_content"
+            android:minWidth="50dp"
+            android:maxWidth="50dp" />
+    </LinearLayout>
+    <LinearLayout
+        android:orientation="horizontal"
+        android:minWidth="25px"
+        android:minHeight="25px"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/Choice2Layout"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp">
+        <TextView
+            android:text="Choice 2"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:id="@+id/Choice2"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:layout_marginRight="5dp" />
+        <EditText
+        	android:inputType="number"
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:id="@+id/Choice2EditText"
+            android:padding="3dp"
+            android:minWidth="50dp"
+            android:maxWidth="50dp"
+            android:background="#E0E0E0" />
+    </LinearLayout>
+    <LinearLayout
+        android:orientation="horizontal"
+        android:minWidth="25px"
+        android:minHeight="25px"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/Choice3Layout"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp">
+        <TextView
+            android:text="Choice 3"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:id="@+id/Choice3"
+            android:gravity="center"
+            android:layout_marginRight="5dp"
+            android:layout_weight="1" />
+        <EditText
+        	android:inputType="number"
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:id="@+id/Choice3EditText"
+            android:padding="3dp"
+            android:minWidth="50dp"
+            android:maxWidth="50dp"
+            android:background="#E0E0E0" />
+    </LinearLayout>
+    <LinearLayout
+        android:orientation="horizontal"
+        android:minWidth="25px"
+        android:minHeight="25px"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/Choice4Layout"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"
+        android:layout_marginTop="10dp">
+        <TextView
+            android:text="Choice 4"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:id="@+id/Choice4"
+            android:layout_marginRight="5dp"
+            android:layout_weight="1"
+            android:gravity="center" />
+        <EditText
+        	android:inputType="number"
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:id="@+id/Choice4EditText"
+            android:padding="3dp"
+            android:minWidth="50dp"
+            android:maxWidth="50dp"
+            android:background="#E0E0E0" />
+    </LinearLayout>
+    <LinearLayout
+        android:orientation="horizontal"
+        android:minWidth="25px"
+        android:minHeight="25px"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/ButtonLayout"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"
+        android:layout_marginTop="10dp">
+        <Button
+            android:text="View Chart"
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:id="@+id/ViewChartButton"
+            android:layout_weight="1" />
+        <Button
+            android:text="Submit Responses"
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:id="@+id/SubmitResponsesButton"
+            android:layout_weight="1" />
+    </LinearLayout>
+</LinearLayout>

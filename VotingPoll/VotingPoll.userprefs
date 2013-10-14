@@ -1,21 +1,30 @@
 ﻿<Properties>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="VotingPoll\CreatePollActivity.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="VotingPoll\Resources\layout\CurrentPollLayout.axml">
     <Files>
       <File FileName="VotingPoll\MainActivity.cs" Line="1" Column="1" />
-      <File FileName="VotingPoll\CreatePollActivity.cs" Line="34" Column="21" />
-      <File FileName="VotingPoll\CreateResponsesActivity.cs" Line="1" Column="1" />
+      <File FileName="VotingPoll\CreateResponsesActivity.cs" Line="38" Column="14" />
+      <File FileName="VotingPoll\CurrentPollActivity.cs" Line="33" Column="81" />
+      <File FileName="VotingPoll\ViewPollsActivity.cs" Line="1" Column="1" />
+      <File FileName="VotingPoll\Resources\layout\CurrentPollLayout.axml" Line="43" Column="10" />
+      <File FileName="VotingPoll\CreatePollActivity.cs" Line="1" Column="1" />
+      <File FileName="VotingPoll\Resources\layout\CreatePollActivityLayout.axml" Line="42" Column="39" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
-        <State expanded="True">
+        <State expanded="True" selected="True">
           <Node name="VotingPoll" expanded="True">
             <Node name="Resources" expanded="True">
               <Node name="layout" expanded="True" />
             </Node>
-            <Node name="CreatePollActivity.cs" selected="True" />
           </Node>
         </State>
+      </Pad>
+      <Pad Id="ClassPad">
+        <State expanded="True" selected="True" />
+      </Pad>
+      <Pad Id="MonoDevelop.Debugger.WatchPad">
+        <State />
       </Pad>
     </Pads>
   </MonoDevelop.Ide.Workbench>
@@ -23,5 +32,5 @@
     <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
-  <MonoDevelop.Ide.ItemProperties.VotingPoll MonoForAntroid.PreferredDevice="3.7in WVGA (Nexus One)" />
+  <MonoDevelop.Ide.ItemProperties.VotingPoll MonoForAntroid.PreferredDevice="3.7in WVGA (Nexus One)" AndroidDeviceId-Debug="004a52aacd0ed7e2" />
 </Properties>

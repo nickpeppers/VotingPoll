@@ -18,8 +18,29 @@ namespace VotingPoll
         protected override void OnCreate(Bundle bundle)
         {
             base.OnCreate(bundle);
-
+            SetContentView(Resource.Layout.CurrentPollLayout);
           
+            var viewChartButton = FindViewById<Button>(Resource.Id.ViewChartButton);
+            var submitResponsesButton = FindViewById<Button>(Resource.Id.SubmitResponsesButton);
+            var question = FindViewById<TextView>(Resource.Id.CurrentPollQuestion);
+            var choice1Text = FindViewById<TextView>(Resource.Id.Choice1);
+            var choice2Text = FindViewById<TextView>(Resource.Id.Choice2);
+            var choice3Text = FindViewById<TextView>(Resource.Id.Choice3);
+            var choice4Text = FindViewById<TextView>(Resource.Id.Choice4);
+            var choice1Edit = FindViewById<EditText>(Resource.Id.Choice1EditText);
+            var choice2Edit = FindViewById<EditText>(Resource.Id.Choice2EditText);
+            var choice3Edit = FindViewById<EditText>(Resource.Id.Choice3EditText);
+            var choice4Edit = FindViewById<EditText>(Resource.Id.Choice4EditText);
+
+            viewChartButton.Click += (sender, e) => 
+            {
+
+            };
+
+            submitResponsesButton.Click += (sender, e) => 
+            {
+
+            };
         }
     }
 }

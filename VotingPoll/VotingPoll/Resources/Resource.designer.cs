@@ -60,6 +60,45 @@ namespace VotingPoll
 		public partial class Id
 		{
 			
+			// aapt resource value: 0x7f05001c
+			public const int ButtonLayout = 2131034140;
+			
+			// aapt resource value: 0x7f050011
+			public const int Choice1 = 2131034129;
+			
+			// aapt resource value: 0x7f050012
+			public const int Choice1EditText = 2131034130;
+			
+			// aapt resource value: 0x7f050010
+			public const int Choice1Layout = 2131034128;
+			
+			// aapt resource value: 0x7f050014
+			public const int Choice2 = 2131034132;
+			
+			// aapt resource value: 0x7f050015
+			public const int Choice2EditText = 2131034133;
+			
+			// aapt resource value: 0x7f050013
+			public const int Choice2Layout = 2131034131;
+			
+			// aapt resource value: 0x7f050017
+			public const int Choice3 = 2131034135;
+			
+			// aapt resource value: 0x7f050018
+			public const int Choice3EditText = 2131034136;
+			
+			// aapt resource value: 0x7f050016
+			public const int Choice3Layout = 2131034134;
+			
+			// aapt resource value: 0x7f05001a
+			public const int Choice4 = 2131034138;
+			
+			// aapt resource value: 0x7f05001b
+			public const int Choice4EditText = 2131034139;
+			
+			// aapt resource value: 0x7f050019
+			public const int Choice4Layout = 2131034137;
+			
 			// aapt resource value: 0x7f050004
 			public const int ChoicesEditText = 2131034116;
 			
@@ -69,17 +108,20 @@ namespace VotingPoll
 			// aapt resource value: 0x7f050005
 			public const int CreateChoicesButton = 2131034117;
 			
-			// aapt resource value: 0x7f05000f
-			public const int CreatePollButton = 2131034127;
+			// aapt resource value: 0x7f050020
+			public const int CreatePollButton = 2131034144;
 			
 			// aapt resource value: 0x7f05000d
-			public const int CreateResponsesButton = 2131034125;
+			public const int CreateResponsesCreatePollButton = 2131034125;
+			
+			// aapt resource value: 0x7f05000e
+			public const int CurrentPollQuestion = 2131034126;
 			
 			// aapt resource value: 0x7f050002
 			public const int NumberText = 2131034114;
 			
-			// aapt resource value: 0x7f050010
-			public const int PollListView = 2131034128;
+			// aapt resource value: 0x7f050021
+			public const int PollListView = 2131034145;
 			
 			// aapt resource value: 0x7f050001
 			public const int QuestionEditText = 2131034113;
@@ -102,14 +144,23 @@ namespace VotingPoll
 			// aapt resource value: 0x7f050008
 			public const int ResponsesLinearLayout = 2131034120;
 			
+			// aapt resource value: 0x7f05001e
+			public const int SubmitResponsesButton = 2131034142;
+			
 			// aapt resource value: 0x7f050007
 			public const int Title = 2131034119;
 			
 			// aapt resource value: 0x7f050000
 			public const int TitleText = 2131034112;
 			
-			// aapt resource value: 0x7f05000e
-			public const int ViewPollsButton = 2131034126;
+			// aapt resource value: 0x7f05001d
+			public const int ViewChartButton = 2131034141;
+			
+			// aapt resource value: 0x7f05001f
+			public const int ViewPollsButton = 2131034143;
+			
+			// aapt resource value: 0x7f05000f
+			public const int textView2 = 2131034127;
 			
 			static Id()
 			{
@@ -131,10 +182,13 @@ namespace VotingPoll
 			public const int CreateResponsesLayout = 2130903041;
 			
 			// aapt resource value: 0x7f030002
-			public const int MainLayout = 2130903042;
+			public const int CurrentPollLayout = 2130903042;
 			
 			// aapt resource value: 0x7f030003
-			public const int ViewPollsLayout = 2130903043;
+			public const int MainLayout = 2130903043;
+			
+			// aapt resource value: 0x7f030004
+			public const int ViewPollsLayout = 2130903044;
 			
 			static Layout()
 			{
