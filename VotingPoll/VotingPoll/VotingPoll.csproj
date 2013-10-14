@@ -57,6 +57,7 @@
     <Compile Include="CreatePollActivity.cs" />
     <Compile Include="CreateResponsesActivity.cs" />
     <Compile Include="ViewPollsActivity.cs" />
+    <Compile Include="ViewChartActivity.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\AboutResources.txt" />
@@ -66,6 +67,7 @@
       <SubType>AndroidResource</SubType>
     </AndroidResource>
     <AndroidResource Include="Resources\layout\CurrentPollLayout.axml" />
+    <AndroidResource Include="Resources\layout\ViewChartLayout.axml" />
   </ItemGroup>
   <ItemGroup>
     <AndroidResource Include="Resources\values\Strings.xml" />
@@ -77,7 +79,6 @@
   <Import Project="$(MSBuildExtensionsPath)\Novell\Novell.MonoDroid.CSharp.targets" />
   <ItemGroup>
     <XamarinComponentReference Include="azure-mobile-services">
-      <InstallationInProgress>False</InstallationInProgress>
       <Version>1.0.4</Version>
       <Visible>False</Visible>
     </XamarinComponentReference>

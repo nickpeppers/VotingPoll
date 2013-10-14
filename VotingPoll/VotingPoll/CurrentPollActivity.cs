@@ -34,7 +34,8 @@ namespace VotingPoll
 
             viewChartButton.Click += (sender, e) => 
             {
-
+                var viewChartIntent = new Intent(this, typeof(ViewChartActivity));
+                StartActivity(viewChartIntent);
             };
 
             submitResponsesButton.Click += (sender, e) => 
