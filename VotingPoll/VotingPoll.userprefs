@@ -1,14 +1,13 @@
 ﻿<Properties>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="VotingPoll\Resources\layout\CurrentPollLayout.axml">
+  <MonoDevelop.Ide.Workbench ActiveDocument="VotingPoll\CurrentPollActivity.cs">
     <Files>
       <File FileName="VotingPoll\MainActivity.cs" Line="1" Column="1" />
-      <File FileName="VotingPoll\CreateResponsesActivity.cs" Line="38" Column="14" />
-      <File FileName="VotingPoll\CurrentPollActivity.cs" Line="33" Column="81" />
-      <File FileName="VotingPoll\ViewPollsActivity.cs" Line="1" Column="1" />
-      <File FileName="VotingPoll\Resources\layout\CurrentPollLayout.axml" Line="43" Column="10" />
-      <File FileName="VotingPoll\CreatePollActivity.cs" Line="1" Column="1" />
-      <File FileName="VotingPoll\Resources\layout\CreatePollActivityLayout.axml" Line="42" Column="39" />
+      <File FileName="VotingPoll\ViewPollsActivity.cs" Line="30" Column="52" />
+      <File FileName="VotingPoll\CurrentPollActivity.cs" Line="143" Column="15" />
+      <File FileName="VotingPoll\ViewChartActivity.cs" Line="1" Column="1" />
+      <File FileName="VotingPoll\Poll.cs" Line="1" Column="1" />
+      <File FileName="VotingPoll\VotingService.cs" Line="14" Column="21" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
@@ -32,5 +31,5 @@
     <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
-  <MonoDevelop.Ide.ItemProperties.VotingPoll MonoForAntroid.PreferredDevice="3.7in WVGA (Nexus One)" AndroidDeviceId-Debug="004a52aacd0ed7e2" />
+  <MonoDevelop.Ide.ItemProperties.VotingPoll MonoForAntroid.PreferredDevice="3.7in WVGA (Nexus One)" AndroidDeviceId-Debug="004a52aacd0ed7e2" AndroidDeviceId-Release="004a52aacd0ed7e2" />
 </Properties>
