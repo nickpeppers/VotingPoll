@@ -35,11 +35,14 @@ namespace VotingPoll
 
             createPollButton.Click += async (sender, e) =>
             {
+                // starts progress spinner when inserting poll into database
                 var progressDialog = new ProgressDialog(this);
                 progressDialog.Show();
 
                 string choices = "";
                 string votes = "";
+
+                // enters in the correct number of votes for each response and choices
                 if (numberOfResponses == 2)
                 {
                     choices = response1.Text + "," + response2.Text;
@@ -58,6 +61,7 @@ namespace VotingPoll
 
                 try
                 {
+                    // trys to insert new Poll into database if it succeeds the activity finishes
                     await VotingService.MobileService.GetTable<Poll>().InsertAsync(new Poll
                     {
                         Question = questionTitle.Text,
@@ -68,16 +72,19 @@ namespace VotingPoll
                 }
                 catch (Exception exc)
                 {
+                    // shows an error dialog if submitting the Poll fails
                     var errorDialog = new AlertDialog.Builder(this).SetTitle("Oops!").SetMessage("Something went wrong " + exc.ToString()).SetPositiveButton("Okay", (sender1, e1) =>
                     {
 
                     }).Create();
                     errorDialog.Show();
                 }
+                // stops progress spinner when done
                 progressDialog.Hide();
                 Finish();
             };
 
+            // displays the correct number of response fields based on the number chosen in previous activity
             switch (numberOfResponses)
             {
                 case 2:
@@ -102,11 +109,6 @@ namespace VotingPoll
                     break;
                 }
             }
-
-            var missingResponseDialog = new AlertDialog.Builder(this).SetTitle("Sorry!").SetMessage("You must enter a response in each field.").SetPositiveButton("Okay", (sender, e) =>
-            {
-
-            }).Create();
         }
     }
 }

@@ -32,6 +32,7 @@ namespace VotingPoll
             var choice3Edit = FindViewById<EditText>(Resource.Id.Choice3EditText);
             var choice4Edit = FindViewById<EditText>(Resource.Id.Choice4EditText);
 
+            // splits the poll votes into corresponding numbers to be displayed based off of the number of choices
             string[] split = VotingService.Poll.Votes.Split(',');
             switch (split.Length)
             {
@@ -60,6 +61,7 @@ namespace VotingPoll
                     break;
                 }
             }
+            // splits the choices of the poll into the corresponding text choices
             split = VotingService.Poll.Choices.Split(',');
             switch (split.Length)
             {
@@ -89,12 +91,14 @@ namespace VotingPoll
                     }
             }
 
+            // takes you to view a bar graph of the number of votes per choice
             viewChartButton.Click += (sender, e) => 
             {
                 var viewChartIntent = new Intent(this, typeof(ViewChartActivity));
                 StartActivity(viewChartIntent);
             };
 
+            // submits the number of votes to the server
             submitResponsesButton.Click += async (sender, e) => 
             {
                 switch (split.Length)
@@ -116,21 +120,25 @@ namespace VotingPoll
                     }
                 }
 
+                // shows spinner while it trys updating ther database
                 var progressDialog = new ProgressDialog(this);
                 progressDialog.Show();
                 
                 try
                 {
+                    // updating the number of votes in the database
                     await VotingService.MobileService.GetTable<Poll>().UpdateAsync(VotingService.Poll);
                 }
                 catch (Exception exc)
                 {
+                    // shows an error if it fails
                     var errorDialog = new AlertDialog.Builder(this).SetTitle("Oops!").SetMessage("Something went wrong " + exc.ToString()).SetPositiveButton("Okay", (sender1, e1) =>
                     {
 
                     }).Create();
                     errorDialog.Show();
                 }
+                // hides spinner when done
                 progressDialog.Hide();
             };
         }

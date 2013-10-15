@@ -19,15 +19,18 @@ namespace VotingPoll
         {
             base.OnCreate(bundle);
 
+            // split the number of votes for the bar graph
             string[]  split = VotingService.Poll.Votes.Split(',');
             int[] data = split.Select(x => int.Parse(x)).ToArray();
             split = VotingService.Poll.Choices.Split(',');
 
+            // creates the chart
             var chart = new BarChartView(this)
             {
                 ItemsSource = Array.ConvertAll(data, v => new BarModel { Value = v})
             };
 
+            // adds the chart to the view to be shown
             AddContentView(chart, new ViewGroup.LayoutParams(
               ViewGroup.LayoutParams.FillParent, ViewGroup.LayoutParams.FillParent));
         }

@@ -24,11 +24,13 @@ namespace VotingPoll
             var choicesEditText = FindViewById<EditText>(Resource.Id.ChoicesEditText);
             var createResponseButton = FindViewById<Button>(Resource.Id.CreateChoicesButton);
 
+            // shows if the number entered is acceptable or not
             var notIntDialog = new AlertDialog.Builder (this).SetTitle("Sorry!").SetMessage("The number you enter must be greater than 1 and at most 4.").SetPositiveButton("Okay",(sender, e) => 
             {
                
             }).Create();
 
+            // shows if the question field is left blank
             var noQuestionDialog = new AlertDialog.Builder (this).SetTitle("Sorry!").SetMessage("You must enter a poll question.").SetPositiveButton("Okay",(sender, e) => 
             {
 
@@ -36,6 +38,7 @@ namespace VotingPoll
 
             createResponseButton.Click += (sender, e) => 
             {
+                //checks to make sure number of poll choices is at least one and at most 5 then takes you to Create the choice screen
                 int num;
                 if(int.TryParse(choicesEditText.Text, out num))
                 {
@@ -50,6 +53,7 @@ namespace VotingPoll
                 }
                 else
                 {
+                    // shows popup saying you left question or number of choices field blank
                     if(string.IsNullOrEmpty(questionEditText.Text))
                     {
                         noQuestionDialog.Show();

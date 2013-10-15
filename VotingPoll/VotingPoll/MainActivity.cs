@@ -9,7 +9,8 @@ using Microsoft.WindowsAzure.MobileServices;
 
 namespace VotingPoll
 {
-	[Activity (Label = "VotingPoll", MainLauncher = true)]
+    // Main screen with two buttons one that take you to View Polls in database and the other takes you to created a poll
+	[Activity (Label = "Voting Poll", MainLauncher = true)]
 	public class MainActivity : Activity
 	{
         protected override void OnCreate (Bundle bundle)
