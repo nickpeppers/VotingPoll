@@ -23,8 +23,20 @@ namespace VotingPoll
 
             var progressDialog = new ProgressDialog(this);
             progressDialog.Show();
+            {
+                try
+                {
+                    polls = await VotingService.MobileService.GetTable<Poll>().ToListAsync();
+                }
+                catch (Exception exc)
+                {
+                    var errorDialog = new AlertDialog.Builder(this).SetTitle("Oops!").SetMessage("Something went wrong " + exc.ToString()).SetPositiveButton("Okay", (sender1, e1) =>
+                    {
 
-            polls = await VotingService.MobileService.GetTable<Poll>().ToListAsync();
+                    }).Create();
+                    errorDialog.Show();
+                }
+            };
             progressDialog.Dismiss();
 
             ListAdapter = new ArrayAdapter<Poll>(this, Android.Resource.Layout.SimpleListItem1, polls);

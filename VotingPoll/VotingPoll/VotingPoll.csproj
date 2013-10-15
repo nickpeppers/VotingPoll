@@ -72,7 +72,6 @@
       <SubType>AndroidResource</SubType>
     </AndroidResource>
     <AndroidResource Include="Resources\layout\CurrentPollLayout.axml" />
-    <AndroidResource Include="Resources\layout\ViewChartLayout.axml" />
   </ItemGroup>
   <ItemGroup>
     <AndroidResource Include="Resources\values\Strings.xml" />

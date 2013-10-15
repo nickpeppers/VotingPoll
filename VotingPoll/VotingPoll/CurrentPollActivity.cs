@@ -33,10 +33,61 @@ namespace VotingPoll
             var choice4Edit = FindViewById<EditText>(Resource.Id.Choice4EditText);
 
             string[] split = VotingService.Poll.Votes.Split(',');
-            choice1Edit.Text = split[0];
-            choice2Edit.Text = split[1];
-            choice3Edit.Text = split[2];
-            choice4Edit.Text = split[3];
+            switch (split.Length)
+            {
+                case 2:
+                {
+                    choice1Edit.Text = split[0];
+                    choice2Edit.Text = split[1];
+                    choice3Edit.Visibility = ViewStates.Gone;
+                    choice4Edit.Visibility = ViewStates.Gone;
+                    break;
+                }
+                case 3:
+                {
+                    choice1Edit.Text = split[0];
+                    choice2Edit.Text = split[1];
+                    choice3Edit.Text = split[2];
+                    choice4Edit.Visibility = ViewStates.Gone;
+                    break;
+                }
+                case 4:
+                {
+                    choice1Edit.Text = split[0];
+                    choice2Edit.Text = split[1];
+                    choice3Edit.Text = split[2];
+                    choice4Edit.Text = split[3];
+                    break;
+                }
+            }
+            split = VotingService.Poll.Choices.Split(',');
+            switch (split.Length)
+            {
+                case 2:
+                    {
+                        choice1Text.Text = split[0];
+                        choice2Text.Text = split[1];
+                        choice3Text.Visibility = ViewStates.Gone;
+                        choice4Text.Visibility = ViewStates.Gone;
+                        break;
+                    }
+                case 3:
+                    {
+                        choice1Text.Text = split[0];
+                        choice2Text.Text = split[1];
+                        choice3Text.Text = split[2];
+                        choice4Text.Visibility = ViewStates.Gone;
+                        break;
+                    }
+                case 4:
+                    {
+                        choice1Text.Text = split[0];
+                        choice2Text.Text = split[1];
+                        choice3Text.Text = split[2];
+                        choice4Text.Text = split[3];
+                        break;
+                    }
+            }
 
             viewChartButton.Click += (sender, e) => 
             {
@@ -46,9 +97,41 @@ namespace VotingPoll
 
             submitResponsesButton.Click += async (sender, e) => 
             {
-                VotingService.Poll.Votes = choice1Edit.Text + "," + choice2Edit.Text + "," + choice3Edit.Text + "," + choice4Edit.Text;
+                switch (split.Length)
+                {
+                    case 2:
+                    {
+                        VotingService.Poll.Votes = choice1Edit.Text + "," + choice2Edit.Text;
+                        break;
+                    }
+                    case 3:
+                    {
+                        VotingService.Poll.Votes = choice1Edit.Text + "," + choice2Edit.Text + "," + choice3Edit.Text;
+                        break;
+                    }
+                    case 4:
+                    {
+                        VotingService.Poll.Votes = choice1Edit.Text + "," + choice2Edit.Text + "," + choice3Edit.Text + "," + choice4Edit.Text;
+                        break;
+                    }
+                }
 
-                await VotingService.MobileService.GetTable<Poll>().UpdateAsync(VotingService.Poll);
+                var progressDialog = new ProgressDialog(this);
+                progressDialog.Show();
+                
+                try
+                {
+                    await VotingService.MobileService.GetTable<Poll>().UpdateAsync(VotingService.Poll);
+                }
+                catch (Exception exc)
+                {
+                    var errorDialog = new AlertDialog.Builder(this).SetTitle("Oops!").SetMessage("Something went wrong " + exc.ToString()).SetPositiveButton("Okay", (sender1, e1) =>
+                    {
+
+                    }).Create();
+                    errorDialog.Show();
+                }
+                progressDialog.Hide();
             };
         }
     }

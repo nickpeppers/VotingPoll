@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using Android.App;
 using Android.Content;
+using Android.Content.PM;
 using Android.OS;
 using Android.Runtime;
 using Android.Views;
@@ -11,7 +12,7 @@ using Android.Widget;
 
 namespace VotingPoll
 {
-    [Activity (Label = "CreatePollActivity")]			
+    [Activity(Label = "CreatePollActivity", LaunchMode = LaunchMode.SingleInstance)]			
     public class CreatePollActivity : Activity
     {
         protected override void OnCreate(Bundle bundle)
@@ -44,6 +45,7 @@ namespace VotingPoll
                         createResponses.PutExtra("Question", questionEditText.Text);
                         createResponses.PutExtra("NumberOfResponses", num);
                         StartActivity(createResponses);
+                        Finish();
                     }
                 }
                 else
@@ -52,7 +54,7 @@ namespace VotingPoll
                     {
                         noQuestionDialog.Show();
                     }
-                    else
+                    else if( string.IsNullOrEmpty(choicesEditText.Text))
                     {
                         notIntDialog.Show();
                     }

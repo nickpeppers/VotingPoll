@@ -9,10 +9,11 @@ using Android.Runtime;
 using Android.Views;
 using Android.Text;
 using Android.Widget;
+using Android.Content.PM;
 
 namespace VotingPoll
 {
-    [Activity (Label = "CreateResponsesActivity")]			
+    [Activity (Label = "CreateResponsesActivity", LaunchMode = LaunchMode.SingleInstance)]			
     public class CreateResponsesActivity : Activity
     {
         protected override void OnCreate(Bundle bundle)
@@ -32,17 +33,49 @@ namespace VotingPoll
 
             questionTitle.Text = question;
 
-            createPollButton.Click += async (sender, e) => 
+            createPollButton.Click += async (sender, e) =>
             {
-                await VotingService.MobileService.GetTable<Poll>().InsertAsync(new Poll
+                var progressDialog = new ProgressDialog(this);
+                progressDialog.Show();
+
+                string choices = "";
+                string votes = "";
+                if (numberOfResponses == 2)
                 {
-                    Question = questionTitle.Text,
-                    Choices = response1.Text + "," +
-                        response2.Text + "," +
-                        response3.Text + "," +
-                        response4.Text,
-                    Votes = "0,0,0,0",
-                });
+                    choices = response1.Text + "," + response2.Text;
+                    votes = "0,0";
+                }
+                if (numberOfResponses == 3)
+                {
+                    choices = response1.Text + "," + response2.Text + "," + response3.Text;
+                    votes = "0,0,0";
+                }
+                if (numberOfResponses == 4)
+                {
+                    choices = response1.Text + "," + response2.Text  + "," + response3.Text + "," + response4.Text;
+                    votes = "0,0,0,0";
+                }
+
+                try
+                {
+                    await VotingService.MobileService.GetTable<Poll>().InsertAsync(new Poll
+                    {
+                        Question = questionTitle.Text,
+                        Choices = choices,
+                        Votes = votes,
+                    });
+
+                }
+                catch (Exception exc)
+                {
+                    var errorDialog = new AlertDialog.Builder(this).SetTitle("Oops!").SetMessage("Something went wrong " + exc.ToString()).SetPositiveButton("Okay", (sender1, e1) =>
+                    {
+
+                    }).Create();
+                    errorDialog.Show();
+                }
+                progressDialog.Hide();
+                Finish();
             };
 
             switch (numberOfResponses)
