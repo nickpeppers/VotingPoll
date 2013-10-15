@@ -30,28 +30,21 @@
         android:id="@+id/NumberText"
         android:layout_marginTop="10dp"
         android:paddingLeft="5dp" />
-    <LinearLayout
-        android:orientation="horizontal"
-        android:minWidth="25px"
-        android:minHeight="25px"
+    <EditText
+        android:inputType="number"
+        android:id="@+id/ChoicesEditText"
+        android:background="#ffe0e0e0"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/ChoicesLayout"
-        android:layout_marginTop="5dp">
-        <EditText
-            android:inputType="number"
-            android:id="@+id/ChoicesEditText"
-            android:layout_width="wrap_content"
-            android:layout_height="fill_parent"
-            android:layout_weight="1"
-            android:background="#ffe0e0e0"
-            android:layout_marginLeft="5dp"
-            android:padding="3dp" />
-        <Button
-            android:text="Create Poll Responses"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:id="@+id/CreateChoicesButton"
-            android:layout_weight="1" />
-    </LinearLayout>
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"
+        android:padding="3dp"
+        android:layout_marginTop="5dp" />
+    <Button
+        android:text="Create Poll Responses"
+        android:id="@+id/CreateChoicesButton"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:textSize="20sp"
+        android:layout_marginTop="10dp" />
 </LinearLayout>
