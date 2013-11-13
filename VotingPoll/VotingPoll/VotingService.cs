@@ -16,7 +16,7 @@ namespace VotingPoll
     public static class VotingService
     {
         // voting service class to get information from Azure server need url and app key to properly find
-        public static readonly MobileServiceClient MobileService = new MobileServiceClient("https://csintermediateproject.azure-mobile.net/", "zeBmdSnLPMjmgYyBgucUibIGUkwGER72");
+        public static readonly MobileServiceClient MobileService = new MobileServiceClient("wesbite url", "key");
 
         // used mainly to set the current poll for other activities to load
         public static Poll Poll { get; set; }
